@@ -101,7 +101,7 @@ a:hover{
 
 /*----------Intro section----------*/
 #home{
-    background-image: url(img/intro-bg.jpg);
+    background-image: url(assets/img/intro-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -194,4 +194,27 @@ a:hover{
     background-color: #0078ff;
     width: 100px;
     bottom: -12px;
+  }
+
+
+  /*------Back to top-------*/
+  .back-to-top {
+    position: fixed;
+    background: #0078ff;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+  }
+  
+  .back-to-top i {
+    padding-top: 12px;
+    color: #fff;
   }
