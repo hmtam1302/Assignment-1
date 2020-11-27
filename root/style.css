@@ -205,6 +205,9 @@ a:hover {
 /*----------Contact----------*/
 #contact-section {
   background-image: url(assets/img/overlay-bg.jpg);
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact {
@@ -262,8 +265,16 @@ a:hover {
 
 .socials {
     padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
+  .socials ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
   .socials ul li {
     display: inline-block;
   }
@@ -297,6 +308,8 @@ a:hover {
     box-shadow: 0 0 0 10px #0078ff;
     display: block;
   }
+
+
 
 /*------Back to top-------*/
 .back-to-top {
