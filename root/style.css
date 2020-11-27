@@ -6,9 +6,13 @@
 }
 
 /*----------General---------*/
+html {
+  height: 100%;
+}
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  height: 100%;
 }
 
 h1,
@@ -135,7 +139,7 @@ a:hover {
 /*----------About section----------*/
 
 .section {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -231,7 +235,7 @@ a:hover {
   font-size: 1.4rem;
   text-transform: uppercase;
   text-align: center;
-  padding: .4rem 0;
+  padding: 0.4rem 0;
 }
 
 .service-box .s-description {
@@ -260,14 +264,13 @@ a:hover {
   display: block;
 }
 
-
-
 /*----------Contact----------*/
 #contact-section {
   background-image: url(assets/img/overlay-bg.jpg);
-  background-position:center center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .contact {
@@ -286,90 +289,126 @@ a:hover {
 }
 
 .validate {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-  }
-
-  .sent-message {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-  }
-
-.btn-rounded{
-    border-radius: 2.5rem;
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
 }
 
-.list-icon{
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
+.sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
 }
 
-
-.list-icon li{
-    display: flex;
-    align-items: center;
-    margin: 5px;
+.btn-rounded {
+  border-radius: 2.5rem;
 }
-.list-icon span{
-    color: var(--color-active);
-    margin-right: 10px;
+
+.list-icon {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.list-icon li {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.list-icon span {
+  color: var(--color-active);
+  margin-right: 10px;
 }
 
 .socials {
-    padding: 1.5rem 0;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials ul li {
+  display: inline-block;
+}
+
+.socials .ico-circle {
+  height: 40px;
+  width: 40px;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  line-height: 1.4;
+  margin: 0 15px 0 0;
+  box-shadow: 0 0 0 3px #0078ff;
+  transition: all 500ms ease;
+}
+
+.socials .ico-circle:hover {
+  background-color: #0078ff;
+  color: #fff;
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+.ico-circle {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #0078ff;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section .contact {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .socials ul{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  #contact-section .container {
+    margin-top: 90px;
   }
-  .socials ul li {
-    display: inline-block;
+}
+
+@media screen and (max-width: 375px) {
+  #contact-section .container {
+    margin-top: 80px;
   }
-  
-  .socials .ico-circle {
-    height: 40px;
-    width: 40px;
-    font-size: 1.7rem;
-    border-radius: 50%;
-    line-height: 1.4;
-    margin: 0 15px 0 0;
-    box-shadow: 0 0 0 3px #0078ff;
-    transition: all 500ms ease;
+}
+
+@media screen and (max-width: 360px) {
+  #contact-section .container {
+    margin-top: 85px;
   }
-  
-  .socials .ico-circle:hover {
-    background-color: #0078ff;
-    color: #fff;
-    box-shadow: 0 0 0 3px #cde1f8;
-    transition: all 500ms ease;
+  #contact {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #contact-section .container {
+    margin-top: 80px;
   }
 
-.ico-circle {
-    height: 100px;
-    width: 100px;
-    font-size: 2rem;
-    border-radius: 50%;
-    line-height: 1.55;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0 0 0 10px #0078ff;
-    display: block;
+  #contact {
+    padding: 1.5rem;
   }
-
-
+}
 
 /*------Back to top-------*/
 .back-to-top {
@@ -384,7 +423,6 @@ a:hover {
   border-radius: 50%;
   right: 15px;
   bottom: 15px;
-  transition: background 0.5s;
   z-index: 11;
 }
 
