@@ -64,8 +64,22 @@ a:hover {
 
 .nav-link-hover:hover {
   color: var(--color-active);
-  border-radius: 25rem;
 }
+
+.nav-link-hover:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    transition: all 1s ease-in-out;
+    width: 0;
+    top: 50px;
+  }
+  .nav-link-hover:hover:before{
+    width: 50px;
+    top: 50px;
+}
+
 
 .active-item {
   color: var(--color-active);
@@ -200,9 +214,11 @@ a:hover {
   position: absolute;
   height: 3px;
   background-color: #0078ff;
+  transition: all 1s ease-in-out;
   width: 100px;
   bottom: -12px;
 }
+
 
 /*--------------------------------------------------------------
 # Services section
