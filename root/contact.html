@@ -2,29 +2,37 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <!--Font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Style file-->
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/main.js"></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <title>Homepage</title>
+
+    <!--Animation.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <title>Contact</title>
 </head>
 
-<body>
+<body data-new-gr-c-s-check-loaded="8.867.0">
     <!------------------Header / Navbar------------->
-    <nav id="mainNav" class="navbar navbar-expand-md fixed-top">
+    <nav id="mainNav" class="navbar navbar-expand-md fixed-top animate__animated animate__slideInDown">
         <div class="container">
             <a href="index.html" class="navbar-brand font-weight-bold" id="projectName">Bookstore</a>
             <button type="button" class="btn" data-toggle="collapse" data-target="#navbarDefault"><i
-                    class="material-icons" id="nav-icon" style="font-size: 36px;">reorder</i></button>
-            </button>
+                    class="material-icons" id="nav-icon" style="font-size: 36px;">menu</i></button>
+
             <div id="navbarDefault" class="navbar-collapse collapse justify-content-end">
                 <ul class="nav navbar-nav text-uppercase font-weight-bold">
                     <li class="nav-item">
@@ -69,15 +77,15 @@
                                                         <div class="form-group">
                                                             <input type="text" name="name" class="form-control"
                                                                 id="name" placeholder="Your Name" data-rule="minlen:4"
-                                                                data-msg="Please enter at least 4 chars" />
-                                                            <div class="validate"  id="validateName"></div>
+                                                                data-msg="Please enter at least 4 chars">
+                                                            <div class="validate" id="validateName"></div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 mb-3">
                                                         <div class="form-group">
                                                             <input type="email" class="form-control" name="email"
                                                                 id="email" placeholder="Your Email" data-rule="email"
-                                                                data-msg="Please enter a valid email" />
+                                                                data-msg="Please enter a valid email">
                                                             <div class="validate" id="validateEmail"></div>
                                                         </div>
                                                     </div>
@@ -85,21 +93,22 @@
                                                         <div class="form-group">
                                                             <input type="text" class="form-control" name="subject"
                                                                 id="subject" placeholder="Subject" data-rule="minlen:4"
-                                                                data-msg="Please enter at least 8 chars of subject" />
-                                                            <div class="validate"  id="validateSubject"></div>
+                                                                data-msg="Please enter at least 8 chars of subject">
+                                                            <div class="validate" id="validateSubject"></div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <textarea class="form-control" name="message" id="message" rows="5"
-                                                                data-rule="required"
+                                                            <textarea class="form-control" name="message" id="message"
+                                                                rows="5" data-rule="required"
                                                                 data-msg="Please write something for us"
                                                                 placeholder="Message"></textarea>
-                                                            <div class="validate"  id="validateMessage"></div>
+                                                            <div class="validate" id="validateMessage"></div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 text-center mb-3">
-                                                        <div class="sent-message" id="message-box">Your message has been sent. Thank you!
+                                                        <div class="sent-message" id="message-box">Your message has been
+                                                            sent. Thank you!
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 text-center">
@@ -128,7 +137,8 @@
                                                 mollitia inventore?
                                             </p>
                                             <ul class="list-icon">
-                                                <li><span class="material-icons">location_on</span> 329 WASHINGTON ST BOSTON, MA
+                                                <li><span class="material-icons">location_on</span> 329 WASHINGTON ST
+                                                    BOSTON, MA
                                                     02108</li>
                                                 <li><span class="material-icons">call</span> (617) 557-0089</li>
                                                 <li><span class="material-icons">email</span> contact@example.com</li>
@@ -137,13 +147,13 @@
                                         <div class="socials">
                                             <ul>
                                                 <li><a href=""><span class="ico-circle"><i
-                                                                class="fab fa-facebook-f"></i></span></a></li>
+                                                                class="fa fa-facebook-f"></i></span></a></li>
                                                 <li><a href=""><span class="ico-circle"><i
-                                                                class="fab fa-instagram"></i></span></a></li>
+                                                                class="fa fa-instagram"></i></span></a></li>
                                                 <li><a href=""><span class="ico-circle"><i
-                                                                class="fab fa-twitter"></i></span></a></li>
+                                                                class="fa fa-twitter"></i></span></a></li>
                                                 <li><a href=""><span class="ico-circle"><i
-                                                                class="fab fa-pinterest-p"></i></span></a></li>
+                                                                class="fa fa-pinterest-p"></i></span></a></li>
                                             </ul>
                                         </div>
                                     </div>
