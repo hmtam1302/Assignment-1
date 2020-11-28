@@ -144,25 +144,12 @@ window.onload = function () {
     document.body.appendChild(css);
 };
 
-/*Scroll animation*/
-$(document).ready(function() {
-    // Check if element is scrolled into view
-    function isScrolledIntoView(elem) {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-  
-      var elemTop = $(elem).offset().top;
-      var elemBottom = elemTop + $(elem).height();
-  
-      return elemBottom <= docViewBottom && elemTop >= docViewTop;
-    }
-    // If element is scrolled into view, fade it in
-    $(window).scroll(function() {
-      $(".scroll-animations").each(function() {
-        if (isScrolledIntoView(this) === true) {
-          $(this).addClass("animate__animated animate__fadeInLeftBig");
-          $(this).removeClass("none");
-        }
+
+  // Preloader
+  $(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
       });
-    });
-});
+    }
+  });

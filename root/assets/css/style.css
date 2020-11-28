@@ -5,7 +5,6 @@
   --color-heading: #1e1e1e;
 }
 
-
 /*----------General---------*/
 html {
   height: 100%;
@@ -68,25 +67,25 @@ a:hover {
 }
 
 .nav-link-hover:before {
-    content: "";
-    position: absolute;
-    height: 3px;
-    background-color: #0078ff;
-    transition: all 1s ease-in-out;
-    width: 0;
-    top: 50px;
-  }
-  .nav-link-hover:hover:before{
-    width: 50px;
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  transition: all 1s ease-in-out;
+  width: 0;
+  top: 50px;
+}
+.nav-link-hover:hover:before {
+  width: 50px;
 }
 
-@media screen and (max-width:414px){
-    .nav-link-hover:before {
-        position: relative;
-        width: 0;
-        top: 30px;
-        display: block;
-      }
+@media screen and (max-width: 414px) {
+  .nav-link-hover:before {
+    position: relative;
+    width: 0;
+    top: 30px;
+    display: block;
+  }
 }
 
 .active-item {
@@ -144,21 +143,21 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .intro .intro-title {
-      font-size: 4.5rem;
-    }
+  .intro .intro-title {
+    font-size: 4.5rem;
   }
-  
+}
+
+.intro .intro-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
   .intro .intro-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 2.5rem;
   }
-  
-  @media (min-width: 768px) {
-    .intro .intro-subtitle {
-      font-size: 2.5rem;
-    }
-  }
+}
 
 .intro .intro-content {
   text-align: center;
@@ -183,12 +182,9 @@ a:hover {
 }
 
 .section-mt-10 {
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
-.section-mt-8{
-    margin-top: 10rem;
-}
 
 .box-shadow-full {
   padding: 3rem 3rem;
@@ -197,6 +193,10 @@ a:hover {
   margin-bottom: 3rem;
   z-index: 2;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box-shadow-full .row {
+  margin: auto;
 }
 
 .about-mf .about-img {
@@ -247,7 +247,6 @@ a:hover {
   width: 100px;
   bottom: -12px;
 }
-
 
 /*--------------------------------------------------------------
 # Services section
@@ -346,7 +345,7 @@ a:hover {
 
 .work-content .w-more {
   color: #4e4e4e;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .work-content .w-more .w-ctegory {
@@ -364,7 +363,7 @@ a:hover {
 }
 
 .work-content .w-like .num-like {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .w-title {
@@ -387,7 +386,8 @@ a:hover {
   z-index: 1;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+.portfolio-details .portfolio-details-carousel .owl-nav,
+.portfolio-details .portfolio-details-carousel .owl-dots {
   margin-top: 5px;
   text-align: left;
 }
@@ -516,7 +516,6 @@ a:hover {
     padding: 0 13rem;
   }
 }
-
 
 /*----------Contact----------*/
 #contact-section {
@@ -685,7 +684,47 @@ a:hover {
   color: #fff;
 }
 
-/*Some function class*/
-.none{
-    visibility: hidden;
+/*Preloader*/
+/*------/ Preloader /------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #0078ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 2s linear infinite;
+  animation: animate-preloader 2s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
