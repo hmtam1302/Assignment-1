@@ -182,8 +182,12 @@ a:hover {
   width: 100%;
 }
 
-.section-mt-8 {
-  margin-top: 8rem;
+.section-mt-10 {
+  margin-top: 15rem;
+}
+
+.section-mt-8{
+    margin-top: 10rem;
 }
 
 .box-shadow-full {
@@ -679,4 +683,9 @@ a:hover {
 .back-to-top i {
   padding-top: 12px;
   color: #fff;
+}
+
+/*Some function class*/
+.none{
+    visibility: hidden;
 }

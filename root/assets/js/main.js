@@ -87,7 +87,7 @@ function checkMsg(msg, validate) {
 }
 
 /*Type writter effect*/
-var TxtType = function(el, toRotate, period) {
+var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -97,17 +97,17 @@ var TxtType = function(el, toRotate, period) {
     this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+TxtType.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
     var delta = 200 - Math.random() * 100;
@@ -115,26 +115,26 @@ TxtType.prototype.tick = function() {
     if (this.isDeleting) { delta /= 2; }
 
     if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
+        delta = this.period;
+        this.isDeleting = true;
     } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
     }
 
-    setTimeout(function() {
-    that.tick();
+    setTimeout(function () {
+        that.tick();
     }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
     var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
+    for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
         var period = elements[i].getAttribute('data-period');
         if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
+            new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
     // INJECT CSS
@@ -143,3 +143,26 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+/*Scroll animation*/
+$(document).ready(function() {
+    // Check if element is scrolled into view
+    function isScrolledIntoView(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+  
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+  
+      return elemBottom <= docViewBottom && elemTop >= docViewTop;
+    }
+    // If element is scrolled into view, fade it in
+    $(window).scroll(function() {
+      $(".scroll-animations").each(function() {
+        if (isScrolledIntoView(this) === true) {
+          $(this).addClass("animate__animated animate__fadeInLeftBig");
+          $(this).removeClass("none");
+        }
+      });
+    });
+});
