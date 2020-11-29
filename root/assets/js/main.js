@@ -39,11 +39,15 @@ function validateData() {
 
 function checkName(name, validate) {
     if (name.value.length < 4) {
+        name.style.border = "2px solid red";
+        name.classList.add("animate__shakeX");
         validate.innerHTML = name.getAttribute("data-msg");
         validate.style.display = "block"
         return false;
     }
     else {
+        name.style.border = "1px solid lightgrey";
+        name.classList.remove("animate__shakeX");
         validate.style.display = "none"
         return true;
     }
@@ -52,11 +56,15 @@ function checkName(name, validate) {
 function checkEmail(email, validate) {
     var reg = /[^@]+@[^@]+.[^@]+/;
     if (!email.value.match(reg)) {
+        email.style.border = "2px solid red";
+        email.classList.add("animate__shakeX");
         validate.innerHTML = email.getAttribute("data-msg");
         validate.style.display = "block"
         return false;
     }
     else {
+        email.style.border = "1px solid lightgrey";
+        email.classList.remove("animate__shakeX");
         validate.style.display = "none"
         return true;
     }
@@ -64,11 +72,15 @@ function checkEmail(email, validate) {
 
 function checkSubject(subject, validate) {
     if (subject.value.length < 8) {
+        subject.style.border = "2px solid red";
+        subject.classList.add("animate__shakeX");
         validate.innerHTML = subject.getAttribute("data-msg");
         validate.style.display = "block"
         return false;
     }
     else {
+        subject.style.border = "1px solid lightgrey";
+        subject.classList.remove("animate__shakeX");
         validate.style.display = "none"
         return true;
     }
@@ -76,11 +88,15 @@ function checkSubject(subject, validate) {
 
 function checkMsg(msg, validate) {
     if (msg.value == "") {
+        msg.style.border = "2px solid red";
+        msg.classList.add("animate__shakeX");
         validate.innerHTML = msg.getAttribute("data-msg");
         validate.style.display = "block"
         return false;
     }
     else {
+        msg.style.border = "1px solid lightgrey";
+        msg.classList.remove("animate__shakeX");
         validate.style.display = "none"
         return true;
     }
@@ -145,11 +161,14 @@ window.onload = function () {
 };
 
 
-  // Preloader
-  $(window).on('load', function() {
+// Preloader
+$(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
-        $(this).remove();
-      });
+        $('#preloader').delay(100).fadeOut('slow', function () {
+            $(this).remove();
+        });
     }
-  });
+});
+
+
+
