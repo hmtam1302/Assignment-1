@@ -33,27 +33,13 @@ include("config.php");
 
 
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-    <script src="js/main.js"></script>
-    
-    <style class="cp-pen-styles">
-    </style>
-
 </head>
 
 <body data-new-gr-c-s-check-loaded="8.867.0">
     <!--Header / Navbar-->
     <nav id="mainNav" class="navbar navbar-expand-md fixed-top animate__animated animate__slideInDown">
         <div class="container">
-            <a href="index.html" class="navbar-brand font-weight-bold" id="projectName">Bookstore</a>
+            <a href="index.php" class="navbar-brand font-weight-bold" id="projectName">Bookstore</a>
             <button type="button" class="btn" data-toggle="collapse" data-target="#navbarDefault"><i
                     class="material-icons" id="nav-icon" style="font-size: 36px;">menu</i></button>
 

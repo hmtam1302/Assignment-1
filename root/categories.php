@@ -32,7 +32,7 @@
     <!--Header / Navbar-->
     <nav id="mainNav" class="navbar navbar-expand-md fixed-top animate__animated animate__slideInDown">
         <div class="container">
-            <a href="index.html" class="navbar-brand font-weight-bold" id="projectName">Services</a>
+            <a href="index.php" class="navbar-brand font-weight-bold" id="projectName">Services</a>
             <button type="button" class="btn" data-toggle="collapse" data-target="#navbarDefault"><i
                     class="material-icons" id="nav-icon" style="font-size: 36px;">menu</i></button>
 
